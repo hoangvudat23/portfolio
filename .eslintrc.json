@@ -1,0 +1,69 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/eslint-config-typescript/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["eslint-plugin-import"],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports",
+        "fixStyle": "separate-type-imports"
+      }
+    ],
+    "@typescript-eslint/dot-notation": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-use-before-define": "error",
+    "dot-notation": "off",
+    "import/newline-after-import": ["error"],
+    "import/order": ["error"],
+    "no-console": "error",
+    "no-debugger": "off",
+    "no-return-await": "off",
+    "no-use-before-define": "error",
+    "no-var": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "singleAttributePerLine": true,
+        "htmlWhitespaceSensitivity": "ignore"
+      }
+    ],
+    "vue/html-closing-bracket-newline": [
+      "error",
+      {
+        "singleline": "never",
+        "multiline": "always"
+      }
+    ],
+    "vue/max-attributes-per-line": [
+      "error",
+      {
+        "singleline": 1,
+        "multiline": 1
+      }
+    ],
+    "vue/multi-word-component-names": "off",
+    "vue/no-v-html": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "parser": "vue-eslint-parser"
+    }
+  ]
+}
